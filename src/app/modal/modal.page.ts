@@ -13,6 +13,7 @@ export class ModalPage {
   direccion: any;
   fecha: Date;
   listaInfo: any[] = [];
+  mostrar: boolean = false;
   constructor() {
     this.nombre = 'David';
     this.apellido = 'Saldarriaga';
@@ -27,7 +28,14 @@ export class ModalPage {
     this.listaInfo.push(this.direccion);
     this.listaInfo.push(this.fecha);
   }
-  mostrarAlerta(){
+  mostrarAlerta() {
     alert("Usuario Registrado");
+  }
+  mostrarLista() {
+    if (this.mostrar) {
+      this.mostrar = false;
+    } else {
+      this.mostrar = true;
+    }
   }
 }

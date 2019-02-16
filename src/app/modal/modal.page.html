@@ -12,11 +12,17 @@
     </ion-card-header>
 
     <ion-card-content>
-      <ion-list>
+      <ion-list *ngIf="mostrar">
         <ion-item *ngFor="let info of listaInfo" (click)="mostrarAlerta()">
-          {{info}}
+          <ion-avatar slot="start">
+            <img src="assets/img/Git.png"/>
+          </ion-avatar>
+          <ion-label>{{info}}</ion-label>
         </ion-item>
       </ion-list>
+      <ion-button (click)="mostrarLista()">
+        <ion-icon name="log-in">mostrar</ion-icon>
+      </ion-button>
     </ion-card-content>
   </ion-card>
 </ion-content>
